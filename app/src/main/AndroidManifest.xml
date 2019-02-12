@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.fingerprint.authentication">
 
+    <!-- Step 1: Add the following permission to the app  -->
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+
+    <!-- Step 2: This permission is depreciated in Android P  -->
     <uses-permission android:name="android.permission.USE_FINGERPRINT" />
 
     <application
@@ -10,7 +14,8 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FingerprintActivity"
+        <activity
+            android:name=".FingerprintActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,7 +24,9 @@
             </intent-filter>
         </activity>
 
-
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
