@@ -5,6 +5,7 @@
 2) Add below permissions in your AndroidMenifest.xml
 
     \<uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    
     \<uses-permission android:name="android.permission.USE_FINGERPRINT" />
 
 3) Use this code for start authentication
